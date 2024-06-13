@@ -1,0 +1,183 @@
+/* General body styles */
+body {
+  background-image: url(/img/Backbground1st.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Profile section styles */
+.profile-section {
+  background-color: rgba(55, 65, 65, 0.397);
+  padding: 113.5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Container for centering content */
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  align-items: center;
+  text-align: left;
+}
+
+/* Profile image styles */
+.profile-image img {
+  width: 400px;
+  margin-top: 10PX;
+  
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: 0 6px 25px rgb(255, 255, 255);
+}
+
+/* Profile details styles */
+.profile-details {
+  flex: 1;
+  min-width: 400px;
+}
+
+/* Title and subtitle styles */
+.profile-details h1 {
+ color: white;
+  font-size: 50px;
+  margin: 0px 15px;
+}
+
+.profile-details h1 span {
+  color: blue;
+}
+
+.profile-details h2 {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  margin: 20px 5px;
+}
+
+/* Paragraph styles */
+.profile-details p {
+  color: rgb(180, 179, 177);
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 40px 5px;
+  width: 88%;
+}
+
+/* Button styles */
+.btn {
+  background: rgb(0, 153, 255);
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: rgb(0, 0, 0);
+  border: 2px solid white;
+}
+
+/* Social media styles */
+.social-media {
+  gap: 20px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media a {
+  border-radius: 50%;
+  padding-top: 10px;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  background-color: rgb(197, 197, 197);
+  display: block;
+  margin: 10px 0;
+  color: rgb(34, 33, 33);
+  font-size: 22px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.social-media a::before {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 22px;
+  top: 30px;
+  right:100%;
+  background: rgb(0, 60, 255);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(10px);
+}
+
+.social-media a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-media a:hover {
+  color: rgb(0, 17, 255);
+}
+
+/* Responsive design: single column layout for smaller screens */
+@media (max-width: 768px) {
+  .profile-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .profile-image img {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+
+  }
+  .profile-details h1 {
+     color: rgb(255, 0, 0);
+     margin: 0px 5px;
+   }
+
+  .profile-details h1{
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .profile-details p{
+    padding: 20px 10px;
+    width: 90%;
+    font-size: 16px;
+  }
+  .social-media {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 40px;
+  }
+
+  .social-media a::before {
+      display: none;
+  }
+}
