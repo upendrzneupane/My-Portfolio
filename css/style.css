@@ -62,7 +62,7 @@ body {
   margin: 20px 5px;
 }
 
-span{
+.profile-details .iam  span{
   color: rgb(0, 255, 55);
   position: relative;
   top: 0;

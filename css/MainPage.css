@@ -174,7 +174,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #0011fd;}
     text-shadow: 0 0 10px rgb(0, 0, 0);
     font-weight: 600;
   }
-  .header-text span{
+  .header-text p span{
     color: rgb(0, 255, 55);
     position: relative;
     top: 0;
