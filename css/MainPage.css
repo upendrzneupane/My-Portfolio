@@ -230,15 +230,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #0011fd;}
     border-bottom: 1px solid #999fb3;
 }
 .single-about-add-info {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .single-about-add-info h3 {
-    color: #0228a1;
-    font-size: 15px;
+    color: #002ec7;
+    font-size: 16px;
     text-transform: capitalize;
 }
 .single-about-add-info p {
-    font-weight: 300;
+    font-weight: 400;
     border:  0;
     padding: 0;
     margin-top: -5px;
@@ -257,7 +257,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #0011fd;}
     left:  0;
     width: 109%;
     height:  100%;
-    background: rgba(0, 110, 255, 0.219);
+    background: rgba(0, 110, 255, 0.075);
 }
 .single-about-img img {
     max-width: 500px;
