@@ -140,15 +140,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #0011fd;}
     height: 800px;
     background-position: center;
 }
-.welcome-hero:before{
-    position:absolute;
-    content: " ";
-    top:0;
-    left:0;
-    background:rgba(0, 0, 0, 0.65);
-    width:100%;
-    height:100%;
-}
+
 
 /*.header-text-area*/
 .header-text h2 {
@@ -680,21 +672,10 @@ p {
         align-items: center;
         justify-content: center;
         background: no-repeat url(/img/Backmainpage.jpg);
-        margin-top: -30px;
+        margin-top: -65px;
         margin-bottom: -70px;
         background-size: 185%;
         background-position: center;
-    }
-
-    .welcome-hero:before{
-        position:absolute;
-        content: " ";
-        top:0;
-        left:0;
-        background:rgba(0, 0, 0, 0.65);
-        width:100%;
-        height:84%;
-        
     }
     .header-text h2{
         font-size: 35px;
