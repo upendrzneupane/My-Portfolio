@@ -22,7 +22,7 @@ body{
 
 #preloader {
     background: #ffffff url(/img/loader.gif) no-repeat center center;
-    background-size: 15%;
+    background-size: 10%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -64,6 +64,15 @@ nav.navbar.bootsnav.no-background {
     background-color: #fff;
     border: none;
 }
+
+#preloader {
+    background: #ffffff url(/img/loader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
 
 nav.navbar.bootsnav {
     background-color: #fff;
