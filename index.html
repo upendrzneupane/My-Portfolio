@@ -24,6 +24,10 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
+    
+    <!----Loading Animation----->
+    <div id="preloader"></div>
+
 
     <!-- Profile Section -->
     <section class="profile-section">
@@ -57,5 +61,17 @@
             </div>
         </div>
     </section>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    </script>
+
+
+
+
+
+
 </body>
 </html>

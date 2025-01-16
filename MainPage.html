@@ -51,6 +51,10 @@
     </head>
 	
 	<body>
+
+		  
+    <!----Loading Animation----->
+    <div id="preloader"></div>
 		
 		<!-- top-area Start -->
 		<header class="top-area">
@@ -574,5 +578,14 @@
 			
 			<!--Custom JS-->
 			<script src="js/custom.js"></script>
+
+			<script>
+				var loader = document.getElementById("preloader");
+				window.addEventListener("load", function(){
+					loader.style.display = "none";
+				})
+			</script>
+
+
 	</body>
 </html>

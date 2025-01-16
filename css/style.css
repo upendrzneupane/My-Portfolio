@@ -8,6 +8,15 @@ body {
   padding: 0;
 }
 
+#preloader {
+  background: #ffffff url(/img/loader.gif) no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
 /* Profile section styles */
 .profile-section {
   background-color: rgba(55, 65, 65, 0.397);
@@ -203,3 +212,4 @@ filter: hue-rotate(360deg);
       display: none;
   }
 }
+
