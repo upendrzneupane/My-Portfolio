@@ -67,7 +67,7 @@ nav.navbar.bootsnav.no-background {
 
 #preloader {
     background: #000000 url(/img/loader.gif) no-repeat center center;
-    background-size: 30%;
+    background-size: 13%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -709,4 +709,12 @@ p {
     .services-content{
         justify-content: center;
     }
+    #preloader {
+        background: #000000 url(/img/loader.gif) no-repeat center center;
+        background-size: 30%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+      }
 }
