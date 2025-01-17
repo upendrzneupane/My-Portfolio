@@ -172,7 +172,7 @@ filter: hue-rotate(360deg);
 
   #preloader {
     background: #000000 url(/img/loader.gif) no-repeat center center;
-    background-size: 10%;
+    background-size: 30%;
     height: 100vh;
     width: 100%;
     position: fixed;
