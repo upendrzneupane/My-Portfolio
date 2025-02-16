@@ -652,11 +652,22 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <!-- <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>  -->
 
-                  <button type="submit">Send Message</button>
+
+
+                  <button type="submit" 
+                     style="gap: 8px; background-color: rgb(9, 121, 250); color: white; padding: 10px 20px; border: none; cursor: pointer; transition: 0.3s; border-radius: 20px;"
+                      onmouseover="this.style.backgroundColor='rgb(9, 121, 250)'; this.style.transform='scale(1.1)'" 
+                      onmouseout="this.style.backgroundColor='rgb(0, 162, 255)'; this.style.transform='scale(1)'">
+                      
+                      <svg width="23" height="23" viewBox="0 0 28 28" style="padding-right: 5px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="white"/>
+                      </svg>Send Message </button>
+                    
+                
                 </div>
 
               </div>
