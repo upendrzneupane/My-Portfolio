@@ -227,3 +227,104 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+
+
+// Portfolio Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Portfolio modal functionality
+  const portfolioTriggers = document.querySelectorAll('.portfolio-modal-trigger');
+  const portfolioModals = document.querySelectorAll('.portfolio-modal');
+  const portfolioCloseButtons = document.querySelectorAll('.portfolio-modal-close');
+  
+  // Open modal when clicking on portfolio item
+  portfolioTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Portfolio trigger clicked'); // Debug log
+      
+      const targetId = this.getAttribute('href');
+      const targetModal = document.querySelector(targetId);
+      
+      console.log('Target ID:', targetId); // Debug log
+      console.log('Target Modal:', targetModal); // Debug log
+      
+      if (targetModal) {
+        // Close any open modals first
+        portfolioModals.forEach(modal => {
+          modal.classList.remove('active');
+        });
+        
+        // Open target modal
+        targetModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Initialize swiper inside modal
+        setTimeout(() => {
+          const swiperEl = targetModal.querySelector('.swiper.init-swiper');
+          if (swiperEl) {
+            console.log('Swiper element found:', swiperEl); // Debug log
+            // Check if swiper is already initialized
+            if (swiperEl.swiper) {
+              swiperEl.swiper.update();
+            } else {
+              try {
+                const swiperConfig = JSON.parse(swiperEl.querySelector('.swiper-config').textContent);
+                new Swiper(swiperEl, swiperConfig);
+                console.log('Swiper initialized successfully'); // Debug log
+              } catch (error) {
+                console.error('Error initializing swiper:', error); // Debug log
+              }
+            }
+          }
+        }, 100);
+      }
+    });
+  });
+  
+  // Close modal when clicking close button
+  portfolioCloseButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      console.log('Close button clicked'); // Debug log
+      const modal = this.closest('.portfolio-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+  
+  // Close modal when clicking outside content
+  portfolioModals.forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        console.log('Clicked outside modal content'); // Debug log
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      console.log('Escape key pressed'); // Debug log
+      portfolioModals.forEach(modal => {
+        if (modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  });
+});
+
+// Initialize PureCounter for stats section
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize PureCounter
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
+});
